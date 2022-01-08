@@ -58,7 +58,7 @@ services:
       - wordpress-db
     image: wordpress:latest
     ports:
-      - "8000:80"
+      - 8000:80
     restart: always
     environment:
       WORDPRESS_DB_HOST: wordpress-db:3306
@@ -74,7 +74,7 @@ services:
 
   hoge:
     image: nginx
-    container_name: 'hoge'
+    container_name: hoge
     volumes:
       - ./hoge:/usr/share/nginx/html
     ports:
